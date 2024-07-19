@@ -1,0 +1,35 @@
+.quantityContainer {
+    font-size: 16px;
+    width: 150px;
+    border: 2px solid #111111;
+
+    .items {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+            cursor: pointer;
+        }
+    }
+}
+
+// .container {
+//     display: grid;
+//     grid-template-columns: 60% 40%;
+
+//     .quantityContainer {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-evenly;
+//     }
+
+//     .trashIcon {
+//         justify-self: center;
+//     }
+
+//     .icon, .trashIcon {
+//         cursor: pointer;
+//     }
+// }
