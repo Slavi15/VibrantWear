@@ -1,0 +1,31 @@
+.footer {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    height: 6vh;
+    align-items: center;
+    justify-items: center;
+    margin: 2% 20% 0 20%;
+    overflow: hidden;
+
+    a {
+        color: #1B1C22;
+        font-size: 16px;
+        text-transform: capitalize;
+        padding: 10px 20px;
+        font-weight: 400;
+        transition: all 0.45s ease;
+
+        &:hover {
+            color: #0BD5CB;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2% 5% 0 5%;
+    }
+}
