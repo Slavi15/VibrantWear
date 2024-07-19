@@ -24,7 +24,7 @@ const Navbar = () => {
     useEffect(() => {
         const header = document.getElementById('header') as HTMLElement;
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (this.window.scrollY > 0) {
                 header.style.background = '#FFFFFF';
                 header.style.boxShadow = 'rgba(149, 157, 165, 0.2) 0px 8px 24px';
@@ -47,7 +47,9 @@ const Navbar = () => {
     return (
         <div>
             <section className={styles.header} id="header">
-                <div style={{ fontSize: 40 }} className={shadowsIntoLight.className}>VibrantWear</div>
+                <Link href="/" prefetch={true}>
+                    <div style={{ fontSize: 40 }} className={shadowsIntoLight.className}>VibrantWear</div>
+                </Link>
 
                 {/* <div className={styles.logo}>
                     <Image 
@@ -61,32 +63,32 @@ const Navbar = () => {
 
                 <ul className={styles.navbar} id="navbar">
                     <li>
-                        <Link href="/" 
-                            prefetch={true} 
+                        <Link href="/"
+                            prefetch={true}
                             onClick={toggleNavbar}>Home</Link>
                     </li>
                     <li>
-                        <Link href="/store" 
-                            prefetch={true} 
+                        <Link href="/store"
+                            prefetch={true}
                             onClick={toggleNavbar}>Store</Link>
                     </li>
                     <li>
                         <Link href="/contact"
-                            prefetch={true} 
+                            prefetch={true}
                             onClick={toggleNavbar}>Contact</Link>
                     </li>
                 </ul>
 
                 <div className={styles.iconContainer}>
                     <Link href="/cart"
-                        prefetch={true} 
+                        prefetch={true}
                         style={{ verticalAlign: 'baseline' }}>
                         <BsBag className={styles.icon} />
                     </Link>
                     <div style={{ marginRight: '20px' }}>({totalItemsCount})</div>
-                    { open ? 
+                    {open ?
                         <VscMenu onClick={toggleNavbar} className={styles.icon} id="navIcon" /> :
-                        <VscChromeClose onClick={toggleNavbar} className={styles.icon} id="navIcon" /> }  
+                        <VscChromeClose onClick={toggleNavbar} className={styles.icon} id="navIcon" />}
                 </div>
             </section>
 
