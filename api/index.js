@@ -5,6 +5,7 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const cron = require("node-cron");
 
 const routes = require("./routes/index.js");
 
@@ -27,6 +28,10 @@ app.use("/api", routes);
 
 app.get('/', (req, res) => {
     res.send("Hello World");
+});
+
+cron.schedule('0 */14 * * * *', () => {
+    fetch(process.env.BACKEND_URL);
 });
 
 const port = process.env.PORT || 5000;
