@@ -72,11 +72,11 @@ const Navbar = () => {
                             prefetch={true}
                             onClick={toggleNavbar}>Store</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/contact"
                             prefetch={true}
                             onClick={toggleNavbar}>Contact</Link>
-                    </li>
+                    </li> */}
                 </ul>
 
                 <div className={styles.iconContainer}>
